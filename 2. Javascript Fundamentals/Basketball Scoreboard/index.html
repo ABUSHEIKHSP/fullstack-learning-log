@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="team-name">HOME</h1>
+                <h1 class="score-board" id="home-score">0</h1>
+
+                <div class="points-container">
+                    <button class="points" onclick="incrementPoint(1,'home')" >+1</button>
+                    <button class="points" onclick="incrementPoint(2, 'home')">+2</button>
+                    <button class="points" onclick="incrementPoint(3, 'home')">+3</button>
+                </div>
+
+            </div>
+            <div>
+                <h1 class="team-name">GUEST</h1>
+                <h1 class="score-board" id="guest-score">0</h1>
+
+                <div class="points-container">
+                    <button class="points" onclick="incrementPoint(1,'guest')">+1</button>
+                    <button class="points" onclick="incrementPoint(2, 'guest')">+2</button>
+                    <button class="points" onclick="incrementPoint(3, 'guest')">+3</button>
+                </div>
+
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

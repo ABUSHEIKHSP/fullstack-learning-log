@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: "score-font";
+    src: url("enhanced-led-board-7.regular.ttf");
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    border: 1px solid black;
+    width: 600px;
+    height: 300px;
+    margin: 30px auto;
+
+    background: #003049;
+    
+    color: white;
+    text-align: center;
+}
+
+.team-name {
+    margin: 20px auto 10px auto;
+}
+
+.score-board {
+    /* Score board */
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 162px;
+    height: 110px;
+    background: #161a1d;
+
+    /* margin-top: 0; */
+    margin: 10px auto;
+
+    font-family: "score-font";
+    font-size: 50px;
+    font-weight: lighter;
+    color: #e5383b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Designed assuming that the 3 points box will be inside it's own new div */
+.points-container{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+
+    /* margin: 0; */
+    /* width: 44;
+    height: 44; */
+}
+
+.points{
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 44;
+    height: 44;
+    margin: auto;
+
+    background: #003049;
+    color: white;
+
+    font-family: "score-font";
+    font-size: 18px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto 0;
+}
