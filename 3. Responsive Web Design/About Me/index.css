@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+/* 
+By default an image renders in it's original pixel size.
+By setting img width to 100% globally, we are explicitly commanding to take 100% width of 
+it's parent's width and not to default to original size. 
+*/
+img {
+    width: 100%;
+    display: block;
+}
+
+/* Header
+********** */
+
+header {
+    padding: 2em 0;
+    background-color: #f8f8f8;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+/* Header Nav-bar */
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+nav li {
+    /* Before we had margin: 0 1em; so 1em on left and 1em on righ, in total 2em */
+    margin-left: 2em;
+}
+
+
+
+nav a:hover ,
+nav a:focus {
+    color: #1792d2;
+}
+
+
+
+.current-page:hover {
+    color: #707070;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0; /* list has a default padding to left to give a space */
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    color: #707070;
+
+    padding: 0.25em 0;
+}
+
+.current-page {
+    border-bottom: 1px solid #707070;
+}
+    
+
+/* Typography
+************** */
+
+.about-me-question,
+.about-me-title,
+.sidebar-recent-post-title,
+.widget-title,
+.article-title,
+#title {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #143774;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about-me-question,
+.article-title,
+.widget-title,
+.sidebar-recent-post-title {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+}
+
+.sidebar-recent-post-title {
+    margin-top: 0.5em;
+}
+
+.about-me-title,
+.article-title {
+    font-size: 1.5rem;
+    
+}
+
+.widget-title {
+    font-weight: 700;
+}
+
+
+.article-body,
+.article-info,
+.article-read-more,
+#sub-title {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: .75rem;
+    color: #1792d2;
+
+    margin-top: 1px;
+}
+
+.article-info
+.article-read-more {
+    font-size: 0.875rem;
+}
+
+.article-info  {
+    color: #707070;
+    font-weight: 400;
+}
+
+.article-body {
+    font-size: 1rem;
+    color: #707070;
+    font-weight: 400;
+    font-style: light;
+}
+
+
+/* Main and Aside
+****************** */
+
+main {
+    text-align: left;
+    margin-right: 1em;
+    width: 68%;
+}
+
+aside {
+    text-align: left;
+    margin-left: 1em;
+    width: 28%;
+}
+
+
+/* Main
+******** */
+
+.article-featured {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2em;
+}
+
+.article-featured img {
+    width: 100%;
+    order: -1;
+}
+
+.article-featured .article-info{
+    order: -1;
+}
+
+.article-info {
+    margin-top: 0.5em;
+}
+
+.article-recent {
+    display: flex;
+    align-items:flex-start;
+}
+
+.article-recent-main {
+    width: 68%;
+    order: 2;
+}
+
+.article-recent-secondary {
+    width: 28%;
+    order: 1;
+}
+
+.article-read-more {
+    text-decoration: none;
+    margin-bottom: 2em;
+}
+
+.article-recent {
+    margin-bottom: 2em;
+}
+
+.article-image {
+    height: 100%;
+    width: 90%;
+    object-fit: fill;
+}
+
+
+/* Aside 
+*********** */
+
+.sidebar-widget {
+    border: 20px solid #efefef;
+    padding: 1.5em;
+    margin-bottom: 3em;
+}
+
+.sidebar-recent-post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2em;
+}
+
+.sidebar-recent-post-title {
+    margin-bottom: 1em;
+}
+
+.sidebar-recent-post:last-child {
+    border: 0;
+    margin-bottom: 0;
+}
+
+.widget-image {
+    order: -1;
+}
+
+
+/* Footer 
+********** */
+
+footer {
+    background: #143774;
+    color: white;
+    padding: 1.5em;
+}
+
+
+/* About me page
+**************** */
+
+.image-full {
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+/* Media Queries */
+
+@media (max-width: 675px) {
+    .container-nav,
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        padding: 1em;
+    }
+
+    .article-recent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-recent-main,
+    .article-recent-secondary,
+    main,
+    aside {
+        width: 100%;
+    }
+
+    aside {
+        margin-left: 0;
+    }
+
+    .article-image {
+        height: 70%;
+        width: 100%;
+        object-fit: fill;
+    }
+
+
+}
